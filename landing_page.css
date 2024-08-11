@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#192430;
+}
+#hero {
+    background-image: url("https://images2.alphacoders.com/134/1341480.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar {
+    display: flex;
+    color:#9EBFD8;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.nav-link{
+    padding: 1rem;
+    color: #D1DBDB;
+    text-decoration: none;
+}
+#header {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    color:#D1DBDB;
+    font-size: larger;
+    padding: 0.5rem;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color:rgba(0, 0, 0, 0.39);
+
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+.para,.heading {
+    color:#D1DBDB ;
+}
+.para {
+    font-weight: 400;
+}
+
+label,input {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    color: #D1DBDB;   
+}
+#email {
+    color: black;
+    padding: 0.2rem 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+#submit {
+    margin-top: 1rem;
+    margin-left: 15rem;
+    width: 30%;
+    padding: 0.2rem 0;
+}
+#credential {
+    display: flex;
+    justify-content: center;
+}
+.section {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+#features p,h2,h3 {
+    color: #D1DBDB;
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+
+#features {
+    margin-bottom: 4rem;
+    padding: 0;
+}
+
+#product_video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:2.5rem;
+    width: 70%;
+    margin: 0 auto;
+}
+.item {
+    aspect-ratio: 1 / 1;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.item img:hover{
+    opacity: 1; 
+}
+h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+#footer {
+    color: #D1DBDB;
+}
+@media (max-width:630px) {
+    #logo {
+        display: none;
+    }
+    
+}
