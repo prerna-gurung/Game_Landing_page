@@ -51,11 +51,18 @@ body {
     font-weight: 400;
 }
 
-label,input {
-    display: block;
-    width: 100%;
-    margin: 1rem 0;
-    color: #D1DBDB;   
+#credential {
+    display: flex;
+    justify-content: center;
+}
+
+#credential form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+label {
+    color:#D1DBDB ;
 }
 #email {
     color: black;
@@ -68,10 +75,6 @@ label,input {
     margin-left: 15rem;
     width: 30%;
     padding: 0.2rem 0;
-}
-#credential {
-    display: flex;
-    justify-content: center;
 }
 .section {
     margin-top: 3rem;
@@ -100,24 +103,36 @@ label,input {
 
 .products {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap:2.5rem;
+    grid-template-columns: repeat(2, 0.8fr); 
+    grid-template-rows: repeat(2, 0.8fr); 
+    gap:3rem;
     width: 70%;
     margin: 0 auto;
+}
+.item:nth-child(2), .col:nth-child(2) {
+    transition-delay: 200ms;
+}
+.item:nth-child(3), .col:nth-child(3){
+    transition-delay: 400ms;
+}
+.item:nth-child(4) {
+    transition-delay: 600ms;
 }
 .item {
     aspect-ratio: 1 / 1;
 }
+
 .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .item img:hover{
     opacity: 1; 
+    transform: scale(1.05);
 }
 h2 {
     text-align: center;
@@ -127,9 +142,33 @@ h2 {
 #footer {
     color: #D1DBDB;
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.animate {
+    transform: translateY(-100%);
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+}
+.animating {
+    opacity: 1;
+    transform: translateY(0);
+    filter:blur(0);
+}
 @media (max-width:630px) {
     #logo {
         display: none;
+    }
+    .products {
+        grid-template-columns: 1fr;
     }
     
 }
